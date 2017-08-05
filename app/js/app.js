@@ -1,13 +1,12 @@
 
 
 (function spotThis() {
-var spotifyApi = new SpotifyWebApi();
   
- 
+window.addEventListener('load',  function () {
+	 window.location.href = 'https://accounts.spotify.com/authorize?client_id=50ab6377b6cc496588431fbecd2d0580&redirect_uri=https%3A%2F%2Foscarrobertrodriguez.github.io%2FMusicBox%2Fcallback&scope=user-read-private%20user-read-email&response_type=token&state=123'; 
 
-spotifyApi.getArtistAlbums('35348426f68a49fd8bfe5c2ed1052c03', function(err, data) {
-  if (err) console.error(err);
-  else console.log('Artist albums', data);
-});
+}); 
+
+ 
 
 }()); 
