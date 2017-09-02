@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "homepage": "https://oscarrobertrodriguez.github.io/MusicBox/",
   "scripts": {
     "lint:js": "eslint app/ webpack.*.js --cache",
     "start": "nodemon --watch webpack.config.js --exec \"webpack-dev-server --env development\"",
