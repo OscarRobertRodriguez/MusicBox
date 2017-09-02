@@ -5114,7 +5114,7 @@ module.exports = (Handlebars["default"] || Handlebars).template({"1":function(co
 
   return "<div class='card'>\n      <img class='card_img' src=\""
     + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.image : depth0)) != null ? stack1["3"] : stack1)) != null ? stack1["#text"] : stack1), depth0))
-    + "\" alt=\"\">\n      <img src=\"./app/images/Triangle.png\" alt=\"\" class='arrow_img' >\n       <ul  class='card_info'>\n         <li>album name</li>\n         <li>"
+    + "\" alt=\"\">\n      <img src=\"./build/images/Triangle.png\" alt=\"\" class='arrow_img' >\n       <ul  class='card_info'>\n         <li>album name</li>\n         <li>"
     + alias2(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : helpers.helperMissing),(typeof helper === "function" ? helper.call(depth0 != null ? depth0 : (container.nullContext || {}),{"name":"name","hash":{},"data":data}) : helper)))
     + "</li>\n         <li>artist name</li>\n         <li>"
     + alias2(alias1(((stack1 = (depth0 != null ? depth0.artist : depth0)) != null ? stack1.name : stack1), depth0))
@@ -7176,7 +7176,7 @@ module.exports = (Handlebars["default"] || Handlebars).template({"1":function(co
 
   return "<div class='card'>\n      <img class='card_img' src=\""
     + alias4(((helper = (helper = helpers.url || (depth0 != null ? depth0.url : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"url","hash":{},"data":data}) : helper)))
-    + "\" alt=\"\">\n      <img src=\"./app/images/Triangle.png\" alt=\"\" class='arrow_img' >\n       <ul  class='card_info'>\n         <li>album name</li>\n         <li>"
+    + "\" alt=\"\">\n      <img src=\"./build/images/Triangle.png\" alt=\"\" class='arrow_img' >\n       <ul  class='card_info'>\n         <li>album name</li>\n         <li>"
     + alias4(((helper = (helper = helpers.album || (depth0 != null ? depth0.album : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"album","hash":{},"data":data}) : helper)))
     + "</li>\n         <li>artist name</li>\n         <li>"
     + alias4(((helper = (helper = helpers.artist || (depth0 != null ? depth0.artist : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"artist","hash":{},"data":data}) : helper)))
