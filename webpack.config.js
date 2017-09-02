@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
 const parts = require('./webpack.parts');
 const webpack = require('webpack'); 
-
+var ghpages = require('gh-pages');
 
 
 const PATHS = {
