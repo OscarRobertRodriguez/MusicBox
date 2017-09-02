@@ -1,0 +1,17 @@
+
+{{#each album}}
+<div class='card'>
+      <img class='card_img' src="{{image.3.[#text]}}" alt="">
+      <img src="/app/images/Triangle.png" alt="" class='arrow_img' >
+       <ul  class='card_info'>
+         <li>album name</li>
+         <li>{{name}}</li>
+         <li>artist name</li>
+         <li>{{artist.name}}</li>
+         <li>rank</li>
+         <li>{{[@attr].rank}}</li>
+       </ul>
+ 
+</div>
+
+{{/each}}

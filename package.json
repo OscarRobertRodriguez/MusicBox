@@ -1,35 +1,32 @@
 {
-  "name": "musicbox",
+  "name": "cats",
   "version": "1.0.0",
-  "description": "musicbox is a project that uses ajax and indexeddb",
-  "main": "gulpfile.js",
-  "dependencies": {
-    "browser-sync": "^2.18.8",
-    "del": "^2.2.2",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^3.1.1",
-    "gulp-cache": "^0.4.6",
-    "gulp-cssnano": "^2.1.2",
-    "gulp-if": "^2.0.2",
-    "gulp-imagemin": "^3.1.1",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^2.1.0",
-    "gulp-useref": "^3.1.2",
-    "run-sequence": "^1.2.2",
-    "spotify-web-api-js": "^0.22.0"
-  },
-  "devDependencies": {},
+  "main": "index.js",
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint:js": "eslint app/ webpack.*.js --cache",
+    "start": "nodemon --watch webpack.config.js --exec \"webpack-dev-server --env development\"",
+    "build": "webpack --env.target production"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/OscarRobertRodriguez/MusicBox.git"
+  "devDependencies": {
+    "css-loader": "^0.28.5",
+    "eslint": "^4.5.0",
+    "eslint-loader": "^1.9.0",
+    "html-webpack-plugin": "^2.30.1",
+    "node-sass": "^4.5.3",
+    "nodemon": "^1.11.0",
+    "postcss-loader": "^2.0.6",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1",
+    "webpack-merge": "^4.1.0"
   },
-  "author": "oscar",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/OscarRobertRodriguez/MusicBox/issues"
-  },
-  "homepage": "https://github.com/OscarRobertRodriguez/MusicBox#readme"
+  "dependencies": {
+    "dexie": "^1.5.1",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "handlebars": "^4.0.10",
+    "handlebars-loader": "^1.5.0",
+    "jquery": "^3.2.1"
+  }
 }
