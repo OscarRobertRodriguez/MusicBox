@@ -1,55 +1,93 @@
 
-const myTemplate = require('./handleTest.hbs');
 import './main.scss';
-var getCookie = require('./getCookie.js');
-var setCookie = require('./setCookie.js');
-var storeToDB = require('./storeToIndexedDb.js');
-var loadIndex = require('./loadIndex.js');
+
+const myTemplate = require('./handleTest.hbs');
+const getCookie = require('./getCookie.js');
+const setCookie = require('./setCookie.js');
+const storeToDB = require('./storeToIndexedDb.js');
+const loadGenre = require('./loadGenre.js');
+const fetchAndStore = require('./fetchAndStore.js');
+const fetchAndStoreAndDisplay = require('./fetchAndStoreAndDisplay.js');
+const Dexie = require('dexie');
+const dropArrow = require('./dropArrow.js');
+const checkCookieAndDisplay = require('./checkCookieAndDisplay.js');
 
 
-loadAlbums();
+(function loadAlbums() {
 
+    var mycookie = getCookie('my_cookie');
+    if (mycookie === null) {
 
-
-function loadAlbums () {
-    
-        
-    var mycookie = getCookie('my_cookie'); 
-    if(mycookie === null){   
-        fetch('http://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=pop&limit=27&api_key=3f5a8b5b437653593a7c6e61e1277e6e&format=json')
-            .then(  
-                function(response) {  
-                    if (response.status !== 200) {  
-                        console.log('Looks like there was a problem. Status Code: ' +  
-        response.status);  
-                        return;  
-                    }
-
-                    // Examine the text in the response  
-                    response.json().then(function(data) { 
-                        
-                        var main = document.getElementById('mainContainer');
-          
-                        
-                        
-                        main.innerHTML = myTemplate(data.albums);
-                        require('./dropArrow.js');
-                        setCookie();
-                        storeToDB(data.albums.album); 
-                    });  
-                }  
-            )  
-            .catch(function(err) {  
-                console.log('Fetch Error :-S', err);  
-            });
+        setCookie();
+        fetchAndStoreAndDisplay('pop');
+        fetchAndStore('rock');
+        fetchAndStore('rap');
+        fetchAndStore('alternative');
+        fetchAndStore('classical');
+    } else {
+        checkCookieAndDisplay();
     }
-    else {
-        
-        
-        loadIndex();
-      
-    }    
-}
-  
+}());
+
+
+var genres = document.querySelector('.genres');
+
+genres.addEventListener('click', function(e) {
+    var div = e.target;
+    var link = e.target.textContent;
+
+    var classical = document.getElementById('classical');
+    var rock = document.getElementById('rock');
+    var alternative = document.getElementById('alternative');
+    var pop = document.getElementById('pop');
+    var rap = document.getElementById('rap');
+
+
+
+    if (link === 'classical') {
+        loadGenre('classical');
+        div.style.textDecoration = 'underline';
+        rock.style.textDecoration = '' ;
+        alternative.style.textDecoration = '';
+        pop.style.textDecoration = '';
+        rap.style.textDecoration = ''; 
+    }
+    if (link === 'rock') {
+        loadGenre('rock');
+        div.style.textDecoration = 'underline';
+        classical.style.textDecoration = '' ;
+        alternative.style.textDecoration = '';
+        pop.style.textDecoration = '';
+        rap.style.textDecoration = ''; 
+    }
+    if (link === 'rap') {
+        loadGenre('rap');
+        div.style.textDecoration = 'underline';
+        rock.style.textDecoration = '' ;
+        alternative.style.textDecoration = '';
+        pop.style.textDecoration = '';
+        classical.style.textDecoration = ''; 
+    }
+    if (link === 'pop') {
+        loadGenre('pop');
+        div.style.textDecoration = 'underline';
+        rock.style.textDecoration = '' ;
+        classical.style.textDecoration = '';
+        alternative.style.textDecoration = '';
+        rap.style.textDecoration = ''; 
+    }
+    if (link === 'alternative') {
+        loadGenre('alternative');
+        div.style.textDecoration = 'underline';
+        rock.style.textDecoration = '' ;
+        classical.style.textDecoration = '';
+        pop.style.textDecoration = '';
+        rap.style.textDecoration = ''; 
+    }
+})
+
+
+
+
 
 

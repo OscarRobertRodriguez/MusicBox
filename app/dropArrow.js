@@ -1,8 +1,8 @@
-(function dropDownArrow () {
+const dropDown = function  () {
 
     var arrows = document.getElementsByClassName('arrow_img'); 
   
-    console.log(arrows);
+    
 
     for(var i = 0; i < arrows.length; i++) {
         arrows[i].addEventListener('click', function (e) {
@@ -13,8 +13,11 @@
             arrow.classList.toggle('spin-arrow'); 
             info_box.classList.toggle('card-show');
             parent.classList.toggle('card-background_color'); 
-            console.log(parent); 
+             
         });
     }
 
-}(window)); 
+};
+
+
+module.exports = dropDown; 
