@@ -27,8 +27,9 @@ const checkCookieAndDisplay = function checkCookieAndDisplay() {
             return db.table('genre').toArray();
         }).then(function(albums) {
             var main = document.getElementById('mainContainer');
+            var link = document.getElementById(cookieLives); 
             var myTemplates = require('./indexedDBHTML.hbs');
-
+            link.style.textDecoration = 'underline';
             main.innerHTML = myTemplates(albums);
             dropArrow();
         }).catch(function(err) {

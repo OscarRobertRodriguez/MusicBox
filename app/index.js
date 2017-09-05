@@ -1,7 +1,6 @@
 
 import './main.scss';
 
-const myTemplate = require('./handleTest.hbs');
 const getCookie = require('./getCookie.js');
 const setCookie = require('./setCookie.js');
 const storeToDB = require('./storeToIndexedDb.js');

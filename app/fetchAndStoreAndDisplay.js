@@ -3,7 +3,7 @@ var dropArrow = require('./dropArrow.js');
 
 
 const fetchAndStoreAndDisplay = function fetchAndStoreAndDisplay(genre) {
-    fetch('https://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=' + genre + '&limit=27&api_key=3f5a8b5b437653593a7c6e61e1277e6e&format=json')
+    fetch('https://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=' + genre + '&limit=100&api_key=3f5a8b5b437653593a7c6e61e1277e6e&format=json')
         .then(function(response) {
             if (response.status !== 200) {
                 console.log('Error staus code ' + response.status);
@@ -13,7 +13,7 @@ const fetchAndStoreAndDisplay = function fetchAndStoreAndDisplay(genre) {
 
                 var db = new Dexie(genre);
                 db.version(1).stores({
-                    genre: '&rank,artist,album,url,info',
+                    genre: '&rank,artist,album,url',
                 });
 
                 data.albums.album.forEach(function(item) {
@@ -21,8 +21,7 @@ const fetchAndStoreAndDisplay = function fetchAndStoreAndDisplay(genre) {
                         rank: +item['@attr'].rank,
                         artist: item.artist.name,
                         album: item.name,
-                        url: item.image[2]['#text'],
-                        info:item.url
+                        url: item.image[2]['#text']
                     });
                 })
 

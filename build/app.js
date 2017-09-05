@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 8);
+/******/ 	return __webpack_require__(__webpack_require__.s = 7);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -4803,7 +4803,7 @@ return Dexie;
 })));
 //# sourceMappingURL=dexie.js.map
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4), __webpack_require__(33).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4), __webpack_require__(16).setImmediate))
 
 /***/ }),
 /* 2 */
@@ -4925,16 +4925,14 @@ module.exports = g;
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Handlebars = __webpack_require__(6);
+var Handlebars = __webpack_require__(21);
 function __default(obj) { return obj && (obj.__esModule ? obj["default"] : obj); }
 module.exports = (Handlebars["default"] || Handlebars).template({"1":function(container,depth0,helpers,partials,data) {
     var helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression;
 
-  return "<div class='card'>\n      <a href=\""
-    + alias4(((helper = (helper = helpers.info || (depth0 != null ? depth0.info : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"info","hash":{},"data":data}) : helper)))
-    + "\"><img class='card_img' src=\""
+  return "<div class='card'>\n      <img class='card_img' src=\""
     + alias4(((helper = (helper = helpers.url || (depth0 != null ? depth0.url : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"url","hash":{},"data":data}) : helper)))
-    + "\" alt=\"\"></a>\n      <img src=\"./images/Triangle.png\" alt=\"\" class='arrow_img' >\n       <ul  class='card_info'>\n         <li>album name</li>\n         <li>"
+    + "\" alt=\"\">\n      <img src=\"./images/Triangle.png\" alt=\"album\" class='arrow_img' >\n       <ul  class='card_info'>\n         <li>album name</li>\n         <li>"
     + alias4(((helper = (helper = helpers.album || (depth0 != null ? depth0.album : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"album","hash":{},"data":data}) : helper)))
     + "</li>\n         <li>artist name</li>\n         <li>"
     + alias4(((helper = (helper = helpers.artist || (depth0 != null ? depth0.artist : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"artist","hash":{},"data":data}) : helper)))
@@ -4949,15 +4947,6 @@ module.exports = (Handlebars["default"] || Handlebars).template({"1":function(co
 
 /***/ }),
 /* 6 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// Create a simple path alias to allow browserify to resolve
-// the runtime on a supported path.
-module.exports = __webpack_require__(15)['default'];
-
-
-/***/ }),
-/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4975,11 +4964,11 @@ var _exception = __webpack_require__(2);
 
 var _exception2 = _interopRequireDefault(_exception);
 
-var _helpers = __webpack_require__(16);
+var _helpers = __webpack_require__(23);
 
-var _decorators = __webpack_require__(24);
+var _decorators = __webpack_require__(31);
 
-var _logger = __webpack_require__(26);
+var _logger = __webpack_require__(33);
 
 var _logger2 = _interopRequireDefault(_logger);
 
@@ -5068,26 +5057,25 @@ exports.logger = _logger2['default'];
 
 
 /***/ }),
-/* 8 */
+/* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__main_scss__ = __webpack_require__(9);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__main_scss__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__main_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__main_scss__);
 
 
 
-const myTemplate = __webpack_require__(14);
-const getCookie = __webpack_require__(30);
-const setCookie = __webpack_require__(31);
-const storeToDB = __webpack_require__(32);
-const loadGenre = __webpack_require__(36);
-const fetchAndStore = __webpack_require__(38);
-const fetchAndStoreAndDisplay = __webpack_require__(39);
+const getCookie = __webpack_require__(13);
+const setCookie = __webpack_require__(14);
+const storeToDB = __webpack_require__(15);
+const loadGenre = __webpack_require__(19);
+const fetchAndStore = __webpack_require__(37);
+const fetchAndStoreAndDisplay = __webpack_require__(38);
 const Dexie = __webpack_require__(1);
 const dropArrow = __webpack_require__(3);
-const checkCookieAndDisplay = __webpack_require__(40);
+const checkCookieAndDisplay = __webpack_require__(39);
 
 
 (function loadAlbums() {
@@ -5171,13 +5159,13 @@ genres.addEventListener('click', function(e) {
 
 
 /***/ }),
-/* 9 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(10);
+var content = __webpack_require__(9);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -5185,7 +5173,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(12)(content, options);
+var update = __webpack_require__(11)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -5202,21 +5190,21 @@ if(false) {
 }
 
 /***/ }),
-/* 10 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(11)(undefined);
+exports = module.exports = __webpack_require__(10)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, "html, body {\n  width: 100vw;\n  min-height: 100vh;\n  margin: 0;\n  padding: 0; }\n\nbody {\n  display: grid;\n  grid-template-rows: auto auto 60px;\n  grid-template-columns: minmax(360px, 1fr);\n  grid-template-areas: 'header' 'main' 'footer';\n  background: #5C258D;\n  /* fallback for old browsers */\n  background: -webkit-linear-gradient(to top, #4389A2, purple);\n  /* Chrome 10-25, Safari 5.1-6 */\n  background: linear-gradient(to top, #4389A2, #5C258D);\n  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }\n\n.title {\n  display: block;\n  font-size: 3rem;\n  color: #fff;\n  font-family: fantasy;\n  letter-spacing: 4px;\n  text-transform: uppercase; }\n\nheader {\n  grid-area: header;\n  text-align: center; }\n\nmain {\n  grid-area: main;\n  display: flex;\n  flex: 1 0 50%;\n  flex-wrap: wrap;\n  justify-content: space-around;\n  margin: 0 auto;\n  max-width: 980px; }\n\nfooter {\n  grid-area: footer;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n/* card styling */\n.card {\n  position: relative;\n  border-radius: 5px;\n  margin-top: 2rem;\n  align-self: flex-start;\n  transition: background .2s ease;\n  margin-left: 1em;\n  width: 300px; }\n\n@media (max-width: 450px) {\n  .card {\n    width: 260px;\n    margin: 0;\n    margin-bottom: 1rem; } }\n\n@media (min-width: 451px) and (max-width: 715px) {\n  .card {\n    margin-left: 0;\n    margin-right: 20px; } }\n\n.card_img {\n  width: 100%;\n  height: 300px; }\n\n.arrow_img {\n  z-index: 1000;\n  position: absolute;\n  bottom: 15px;\n  right: 0;\n  cursor: pointer;\n  transition: transform .3s ease;\n  color: #064F81; }\n\n.spin-arrow {\n  transform: rotate(180deg);\n  bottom: -6px; }\n\n.card_info {\n  height: 0px;\n  overflow: hidden;\n  opacity: 0;\n  transition: height 0.3s cubic-bezier(0.17, 0.67, 0.03, 0.87), opacity 0.5s ease;\n  flex-flow: column;\n  justify-content: space-between;\n  list-style-type: none;\n  text-align: center;\n  padding: 0; }\n\n.card_info > li:nth-child(odd) {\n  font-size: 1.8rem;\n  text-transform: capitalize;\n  padding: 10px 0 15px 0;\n  margin: 0;\n  color: #fff; }\n\n.card_info > li:nth-child(even) {\n  color: orange;\n  font-size: 1.4rem;\n  padding: 0px 10px; }\n\n.card-show {\n  height: auto;\n  min-height: 300px;\n  overflow: visible;\n  opacity: 1; }\n\n.card-background_color {\n  background: #232526;\n  /* fallback for old browsers */\n  background: -webkit-linear-gradient(to right, #414345, #232526);\n  /* Chrome 10-25, Safari 5.1-6 */\n  background: linear-gradient(to right, #414345, #232526);\n  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }\n\n.genre-container {\n  display: flex;\n  justify-content: center;\n  text-align: center;\n  width: 100%; }\n\n.genres {\n  color: #fff;\n  list-style-type: none;\n  margin: 0;\n  padding: 0;\n  text-align: center;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: center;\n  width: 980px; }\n\n.genre-cat {\n  font-size: 2.2rem;\n  padding: 10px;\n  text-transform: capitalize;\n  font-family: fantasy;\n  cursor: pointer;\n  padding-bottom: 5px; }\n  .genre-cat:hover {\n    color: #BC6AFF; }\n  .genre-cat:active {\n    color: #fff; }\n\n@media (min-width: 600px) and (max-width: 1599px) {\n  body {\n    display: grid;\n    grid-template-rows: 200px auto 60px;\n    grid-template-columns: minmax(360px, 1fr);\n    grid-template-areas: 'header' 'main' 'footer'; }\n  .title {\n    margin-top: 15px; }\n  .genres {\n    color: #fff;\n    list-style-type: none;\n    margin: 0;\n    padding: 0;\n    text-align: center;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    height: auto;\n    width: 580px;\n    max-width: 100%; }\n  .genre-cat {\n    font-size: 2.0rem;\n    text-transform: capitalize;\n    font-family: fantasy;\n    cursor: pointer;\n    float: left;\n    padding-bottom: 5px; }\n    .genre-cat:active {\n      color: #fff; } }\n\n@media (min-width: 1600px) {\n  body {\n    grid-template-rows: 1fr auto 60px;\n    grid-template-columns: minmax(150px, 1fr) 3fr 3fr;\n    grid-template-areas: 'header main main'  'header main main' 'header footer footer'; }\n  .title {\n    font-size: 1.8rem; }\n  header {\n    display: flex;\n    justify-content: flex-start;\n    flex-direction: column;\n    padding: 20px;\n    background: rgba(0, 0, 0, 0.5);\n    max-width: 200px; }\n  main {\n    margin-bottom: 20px;\n    align-content: flex-start;\n    padding: 20px;\n    max-width: 100%; }\n  .genres {\n    color: #fff;\n    list-style-type: none;\n    margin: 0;\n    padding: 0;\n    text-align: center;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    height: auto;\n    width: 580px;\n    max-width: 100%; }\n  .genre-cat:hover {\n    color: #BC6AFF; }\n  .genre-cat:active {\n    color: #fff; } }\n\n@media (min-width: 2000px) {\n  main {\n    max-width: 80%; } }\n", ""]);
+exports.push([module.i, "html, body {\n  width: 100vw;\n  min-height: 100vh;\n  margin: 0;\n  padding: 0; }\n\nbody {\n  display: grid;\n  grid-template-rows: auto auto 60px;\n  grid-template-columns: minmax(360px, 1fr);\n  grid-template-areas: 'header' 'main' 'footer';\n  background: #5C258D;\n  /* fallback for old browsers */\n  background: -webkit-linear-gradient(to top, #4389A2, purple);\n  /* Chrome 10-25, Safari 5.1-6 */\n  background: linear-gradient(to top, #4389A2, #5C258D);\n  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }\n\n.title {\n  display: block;\n  font-size: 3rem;\n  color: #fff;\n  font-family: fantasy;\n  letter-spacing: 4px;\n  text-transform: uppercase; }\n\nheader {\n  grid-area: header;\n  text-align: center; }\n\nmain {\n  grid-area: main;\n  display: flex;\n  flex: 1 0 50%;\n  flex-wrap: wrap;\n  justify-content: space-around;\n  margin: 0 auto;\n  max-width: 980px; }\n\nfooter {\n  grid-area: footer;\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n/* card styling */\n.card {\n  position: relative;\n  border-radius: 5px;\n  margin-top: 2rem;\n  align-self: flex-start;\n  transition: background .2s ease;\n  margin-left: 1em;\n  width: 200px; }\n\n.card_img {\n  width: 100%;\n  height: 200px; }\n\n@media (max-width: 450px) {\n  .card {\n    width: 260px;\n    margin: 0;\n    margin-bottom: 1rem; }\n  .card_img {\n    height: 260px; } }\n\n@media (min-width: 451px) and (max-width: 715px) {\n  .card {\n    margin-left: 0;\n    margin-right: 20px; } }\n\n.arrow_img {\n  z-index: 1000;\n  position: absolute;\n  bottom: 15px;\n  right: 0;\n  cursor: pointer;\n  transition: transform .5s ease;\n  color: #064F81; }\n\n.spin-arrow {\n  transform: rotate(180deg);\n  bottom: -6px; }\n\n.card_info {\n  max-height: 0;\n  overflow: hidden;\n  opacity: 0;\n  transition: max-height 0.2s cubic-bezier(0.47, 0, 0.745, 0.715), opacity 0.3s ease-in-out;\n  flex-flow: column;\n  justify-content: space-between;\n  list-style-type: none;\n  text-align: center;\n  padding: 0; }\n\n.card_info > li:nth-child(odd) {\n  font-size: 1.8rem;\n  text-transform: capitalize;\n  padding: 10px 0 15px 0;\n  margin: 0;\n  color: #fff; }\n\n.card_info > li:nth-child(even) {\n  color: orange;\n  font-size: 1.4rem;\n  padding: 0px 10px; }\n\n.card-show {\n  height: auto;\n  max-height: 600px;\n  overflow: visible;\n  opacity: 1; }\n\n.card-background_color {\n  background: #232526;\n  /* fallback for old browsers */\n  background: -webkit-linear-gradient(to right, #414345, #232526);\n  /* Chrome 10-25, Safari 5.1-6 */\n  background: linear-gradient(to right, #414345, #232526);\n  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ }\n\n.genre-container {\n  display: flex;\n  justify-content: center;\n  text-align: center;\n  width: 100%; }\n\n.genres {\n  color: #fff;\n  list-style-type: none;\n  margin: 0;\n  padding: 0;\n  text-align: center;\n  display: flex;\n  flex-direction: row;\n  flex-wrap: wrap;\n  justify-content: center;\n  width: 980px; }\n\n.genre-cat {\n  font-size: 2.2rem;\n  padding: 10px;\n  text-transform: capitalize;\n  font-family: fantasy;\n  cursor: pointer;\n  padding-bottom: 5px; }\n  .genre-cat:hover {\n    color: #BC6AFF; }\n  .genre-cat:active {\n    color: #fff; }\n\n@media (min-width: 600px) and (max-width: 1399px) {\n  body {\n    display: grid;\n    grid-template-rows: 200px auto 60px;\n    grid-template-columns: minmax(360px, 1fr);\n    grid-template-areas: 'header' 'main' 'footer'; }\n  .title {\n    margin-top: 15px; }\n  .genres {\n    color: #fff;\n    list-style-type: none;\n    margin: 0;\n    padding: 0;\n    text-align: center;\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    height: auto;\n    width: 580px;\n    max-width: 100%; }\n  .genre-cat {\n    font-size: 2.0rem;\n    text-transform: capitalize;\n    font-family: fantasy;\n    cursor: pointer;\n    float: left;\n    padding-bottom: 5px; }\n    .genre-cat:active {\n      color: #fff; } }\n\n@media (min-width: 1400px) {\n  body {\n    grid-template-rows: 1fr auto 60px;\n    grid-template-columns: minmax(150px, 1fr) 3fr 3fr;\n    grid-template-areas: 'header main main'  'header main main' 'header footer footer'; }\n  .card {\n    width: 200px; }\n  .card_img {\n    height: 200px; }\n  .title {\n    font-size: 1.8rem; }\n  header {\n    display: flex;\n    justify-content: flex-start;\n    flex-direction: column;\n    padding: 20px;\n    background: rgba(0, 0, 0, 0.5);\n    width: 180px;\n    max-width: 200px; }\n  main {\n    margin-bottom: 20px;\n    align-content: flex-start;\n    padding: 20px;\n    max-width: 100%; }\n  .genres {\n    color: #fff;\n    list-style-type: none;\n    margin: 0;\n    padding: 0;\n    text-align: center;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n    height: auto;\n    width: 580px;\n    max-width: 100%; }\n  .genre-cat:hover {\n    color: #BC6AFF; }\n  .genre-cat:active {\n    color: #fff; } }\n\n@media (min-width: 2000px) {\n  main {\n    max-width: 80%; } }\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 11 */
+/* 10 */
 /***/ (function(module, exports) {
 
 /*
@@ -5298,7 +5286,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 12 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -5344,7 +5332,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(13);
+var	fixUrls = __webpack_require__(12);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -5657,7 +5645,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ (function(module, exports) {
 
 
@@ -5752,34 +5740,574 @@ module.exports = function (css) {
 
 
 /***/ }),
+/* 13 */
+/***/ (function(module, exports) {
+
+const getCookie = function getCookie(name) {
+    var dc = document.cookie;
+    var prefix = name + '=';
+    var begin = dc.indexOf('; ' + prefix);
+    if (begin == -1) {
+        begin = dc.indexOf(prefix);
+        if (begin != 0) return null;
+    }
+    else
+    {
+        begin += 2;
+        var end = document.cookie.indexOf(';', begin);
+        if (end == -1) {
+            end = dc.length;
+        }
+    }
+    // because unescape has been deprecated, replaced with decodeURI
+    //return unescape(dc.substring(begin + prefix.length, end));
+    return decodeURI(dc.substring(begin + prefix.length, end));
+}; 
+
+module.exports = getCookie; 
+
+/***/ }),
 /* 14 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-var Handlebars = __webpack_require__(6);
-function __default(obj) { return obj && (obj.__esModule ? obj["default"] : obj); }
-module.exports = (Handlebars["default"] || Handlebars).template({"1":function(container,depth0,helpers,partials,data) {
-    var stack1, helper, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing, alias3="function", alias4=container.escapeExpression, alias5=container.lambda;
+const setCookie = function setCookie() {
+    document.cookie = 'my_cookie=visitCookie;max-age=3600';  
+};
 
-  return "<div class='card'>\n      <a href=\""
-    + alias4(((helper = (helper = helpers.url || (depth0 != null ? depth0.url : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"url","hash":{},"data":data}) : helper)))
-    + "\"><img class='card_img' src=\""
-    + alias4(alias5(((stack1 = ((stack1 = (depth0 != null ? depth0.image : depth0)) != null ? stack1["3"] : stack1)) != null ? stack1["#text"] : stack1), depth0))
-    + "\" alt=\"\"></a>\n      <img src=\"./app/images/Triangle.png\" alt=\"\" class='arrow_img' >\n       <ul  class='card_info'>\n         <li>album name</li>\n         <li>"
-    + alias4(((helper = (helper = helpers.name || (depth0 != null ? depth0.name : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"name","hash":{},"data":data}) : helper)))
-    + "</li>\n         <li>artist name</li>\n         <li>"
-    + alias4(alias5(((stack1 = (depth0 != null ? depth0.artist : depth0)) != null ? stack1.name : stack1), depth0))
-    + "</li>\n         <li>rank</li>\n         <li>"
-    + alias4(alias5(((stack1 = (depth0 != null ? depth0["@attr"] : depth0)) != null ? stack1.rank : stack1), depth0))
-    + "</li>\n       </ul>\n \n</div>\n\n";
-},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    var stack1;
-
-  return "\n"
-    + ((stack1 = helpers.each.call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0.album : depth0),{"name":"each","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "");
-},"useData":true});
+module.exports = setCookie;
 
 /***/ }),
 /* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var Dexie = __webpack_require__(1);
+
+
+
+const storeToDB = function storeToDB (data) {
+    var db = new Dexie('pop');
+    db.version(1).stores({
+        genre: '&rank,artist,album,url',
+    });
+
+    data.forEach(function(item) {
+        db.genre.add({ rank: +item['@attr'].rank, artist: item.artist.name, album: item.name, url: item.image[2]['#text']});
+    }); 
+     
+    
+  
+};
+
+
+
+
+module.exports = storeToDB;
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var apply = Function.prototype.apply;
+
+// DOM APIs, for completeness
+
+exports.setTimeout = function() {
+  return new Timeout(apply.call(setTimeout, window, arguments), clearTimeout);
+};
+exports.setInterval = function() {
+  return new Timeout(apply.call(setInterval, window, arguments), clearInterval);
+};
+exports.clearTimeout =
+exports.clearInterval = function(timeout) {
+  if (timeout) {
+    timeout.close();
+  }
+};
+
+function Timeout(id, clearFn) {
+  this._id = id;
+  this._clearFn = clearFn;
+}
+Timeout.prototype.unref = Timeout.prototype.ref = function() {};
+Timeout.prototype.close = function() {
+  this._clearFn.call(window, this._id);
+};
+
+// Does not start the time, just sets up the members needed.
+exports.enroll = function(item, msecs) {
+  clearTimeout(item._idleTimeoutId);
+  item._idleTimeout = msecs;
+};
+
+exports.unenroll = function(item) {
+  clearTimeout(item._idleTimeoutId);
+  item._idleTimeout = -1;
+};
+
+exports._unrefActive = exports.active = function(item) {
+  clearTimeout(item._idleTimeoutId);
+
+  var msecs = item._idleTimeout;
+  if (msecs >= 0) {
+    item._idleTimeoutId = setTimeout(function onTimeout() {
+      if (item._onTimeout)
+        item._onTimeout();
+    }, msecs);
+  }
+};
+
+// setimmediate attaches itself to the global object
+__webpack_require__(17);
+exports.setImmediate = setImmediate;
+exports.clearImmediate = clearImmediate;
+
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+/* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
+    "use strict";
+
+    if (global.setImmediate) {
+        return;
+    }
+
+    var nextHandle = 1; // Spec says greater than zero
+    var tasksByHandle = {};
+    var currentlyRunningATask = false;
+    var doc = global.document;
+    var registerImmediate;
+
+    function setImmediate(callback) {
+      // Callback can either be a function or a string
+      if (typeof callback !== "function") {
+        callback = new Function("" + callback);
+      }
+      // Copy function arguments
+      var args = new Array(arguments.length - 1);
+      for (var i = 0; i < args.length; i++) {
+          args[i] = arguments[i + 1];
+      }
+      // Store and register the task
+      var task = { callback: callback, args: args };
+      tasksByHandle[nextHandle] = task;
+      registerImmediate(nextHandle);
+      return nextHandle++;
+    }
+
+    function clearImmediate(handle) {
+        delete tasksByHandle[handle];
+    }
+
+    function run(task) {
+        var callback = task.callback;
+        var args = task.args;
+        switch (args.length) {
+        case 0:
+            callback();
+            break;
+        case 1:
+            callback(args[0]);
+            break;
+        case 2:
+            callback(args[0], args[1]);
+            break;
+        case 3:
+            callback(args[0], args[1], args[2]);
+            break;
+        default:
+            callback.apply(undefined, args);
+            break;
+        }
+    }
+
+    function runIfPresent(handle) {
+        // From the spec: "Wait until any invocations of this algorithm started before this one have completed."
+        // So if we're currently running a task, we'll need to delay this invocation.
+        if (currentlyRunningATask) {
+            // Delay by doing a setTimeout. setImmediate was tried instead, but in Firefox 7 it generated a
+            // "too much recursion" error.
+            setTimeout(runIfPresent, 0, handle);
+        } else {
+            var task = tasksByHandle[handle];
+            if (task) {
+                currentlyRunningATask = true;
+                try {
+                    run(task);
+                } finally {
+                    clearImmediate(handle);
+                    currentlyRunningATask = false;
+                }
+            }
+        }
+    }
+
+    function installNextTickImplementation() {
+        registerImmediate = function(handle) {
+            process.nextTick(function () { runIfPresent(handle); });
+        };
+    }
+
+    function canUsePostMessage() {
+        // The test against `importScripts` prevents this implementation from being installed inside a web worker,
+        // where `global.postMessage` means something completely different and can't be used for this purpose.
+        if (global.postMessage && !global.importScripts) {
+            var postMessageIsAsynchronous = true;
+            var oldOnMessage = global.onmessage;
+            global.onmessage = function() {
+                postMessageIsAsynchronous = false;
+            };
+            global.postMessage("", "*");
+            global.onmessage = oldOnMessage;
+            return postMessageIsAsynchronous;
+        }
+    }
+
+    function installPostMessageImplementation() {
+        // Installs an event handler on `global` for the `message` event: see
+        // * https://developer.mozilla.org/en/DOM/window.postMessage
+        // * http://www.whatwg.org/specs/web-apps/current-work/multipage/comms.html#crossDocumentMessages
+
+        var messagePrefix = "setImmediate$" + Math.random() + "$";
+        var onGlobalMessage = function(event) {
+            if (event.source === global &&
+                typeof event.data === "string" &&
+                event.data.indexOf(messagePrefix) === 0) {
+                runIfPresent(+event.data.slice(messagePrefix.length));
+            }
+        };
+
+        if (global.addEventListener) {
+            global.addEventListener("message", onGlobalMessage, false);
+        } else {
+            global.attachEvent("onmessage", onGlobalMessage);
+        }
+
+        registerImmediate = function(handle) {
+            global.postMessage(messagePrefix + handle, "*");
+        };
+    }
+
+    function installMessageChannelImplementation() {
+        var channel = new MessageChannel();
+        channel.port1.onmessage = function(event) {
+            var handle = event.data;
+            runIfPresent(handle);
+        };
+
+        registerImmediate = function(handle) {
+            channel.port2.postMessage(handle);
+        };
+    }
+
+    function installReadyStateChangeImplementation() {
+        var html = doc.documentElement;
+        registerImmediate = function(handle) {
+            // Create a <script> element; its readystatechange event will be fired asynchronously once it is inserted
+            // into the document. Do so, thus queuing up the task. Remember to clean up once it's been called.
+            var script = doc.createElement("script");
+            script.onreadystatechange = function () {
+                runIfPresent(handle);
+                script.onreadystatechange = null;
+                html.removeChild(script);
+                script = null;
+            };
+            html.appendChild(script);
+        };
+    }
+
+    function installSetTimeoutImplementation() {
+        registerImmediate = function(handle) {
+            setTimeout(runIfPresent, 0, handle);
+        };
+    }
+
+    // If supported, we should attach to the prototype of global, since that is where setTimeout et al. live.
+    var attachTo = Object.getPrototypeOf && Object.getPrototypeOf(global);
+    attachTo = attachTo && attachTo.setTimeout ? attachTo : global;
+
+    // Don't get fooled by e.g. browserify environments.
+    if ({}.toString.call(global.process) === "[object process]") {
+        // For Node.js before 0.9
+        installNextTickImplementation();
+
+    } else if (canUsePostMessage()) {
+        // For non-IE10 modern browsers
+        installPostMessageImplementation();
+
+    } else if (global.MessageChannel) {
+        // For web workers, where supported
+        installMessageChannelImplementation();
+
+    } else if (doc && "onreadystatechange" in doc.createElement("script")) {
+        // For IE 6–8
+        installReadyStateChangeImplementation();
+
+    } else {
+        // For older browsers
+        installSetTimeoutImplementation();
+    }
+
+    attachTo.setImmediate = setImmediate;
+    attachTo.clearImmediate = clearImmediate;
+}(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
+
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4), __webpack_require__(18)))
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports) {
+
+// shim for using process in browser
+var process = module.exports = {};
+
+// cached from whatever global is present so that test runners that stub it
+// don't break things.  But we need to wrap it in a try catch in case it is
+// wrapped in strict mode code which doesn't define any globals.  It's inside a
+// function because try/catches deoptimize in certain engines.
+
+var cachedSetTimeout;
+var cachedClearTimeout;
+
+function defaultSetTimout() {
+    throw new Error('setTimeout has not been defined');
+}
+function defaultClearTimeout () {
+    throw new Error('clearTimeout has not been defined');
+}
+(function () {
+    try {
+        if (typeof setTimeout === 'function') {
+            cachedSetTimeout = setTimeout;
+        } else {
+            cachedSetTimeout = defaultSetTimout;
+        }
+    } catch (e) {
+        cachedSetTimeout = defaultSetTimout;
+    }
+    try {
+        if (typeof clearTimeout === 'function') {
+            cachedClearTimeout = clearTimeout;
+        } else {
+            cachedClearTimeout = defaultClearTimeout;
+        }
+    } catch (e) {
+        cachedClearTimeout = defaultClearTimeout;
+    }
+} ())
+function runTimeout(fun) {
+    if (cachedSetTimeout === setTimeout) {
+        //normal enviroments in sane situations
+        return setTimeout(fun, 0);
+    }
+    // if setTimeout wasn't available but was latter defined
+    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+        cachedSetTimeout = setTimeout;
+        return setTimeout(fun, 0);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedSetTimeout(fun, 0);
+    } catch(e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+            return cachedSetTimeout.call(null, fun, 0);
+        } catch(e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+            return cachedSetTimeout.call(this, fun, 0);
+        }
+    }
+
+
+}
+function runClearTimeout(marker) {
+    if (cachedClearTimeout === clearTimeout) {
+        //normal enviroments in sane situations
+        return clearTimeout(marker);
+    }
+    // if clearTimeout wasn't available but was latter defined
+    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+        cachedClearTimeout = clearTimeout;
+        return clearTimeout(marker);
+    }
+    try {
+        // when when somebody has screwed with setTimeout but no I.E. maddness
+        return cachedClearTimeout(marker);
+    } catch (e){
+        try {
+            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+            return cachedClearTimeout.call(null, marker);
+        } catch (e){
+            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+            return cachedClearTimeout.call(this, marker);
+        }
+    }
+
+
+
+}
+var queue = [];
+var draining = false;
+var currentQueue;
+var queueIndex = -1;
+
+function cleanUpNextTick() {
+    if (!draining || !currentQueue) {
+        return;
+    }
+    draining = false;
+    if (currentQueue.length) {
+        queue = currentQueue.concat(queue);
+    } else {
+        queueIndex = -1;
+    }
+    if (queue.length) {
+        drainQueue();
+    }
+}
+
+function drainQueue() {
+    if (draining) {
+        return;
+    }
+    var timeout = runTimeout(cleanUpNextTick);
+    draining = true;
+
+    var len = queue.length;
+    while(len) {
+        currentQueue = queue;
+        queue = [];
+        while (++queueIndex < len) {
+            if (currentQueue) {
+                currentQueue[queueIndex].run();
+            }
+        }
+        queueIndex = -1;
+        len = queue.length;
+    }
+    currentQueue = null;
+    draining = false;
+    runClearTimeout(timeout);
+}
+
+process.nextTick = function (fun) {
+    var args = new Array(arguments.length - 1);
+    if (arguments.length > 1) {
+        for (var i = 1; i < arguments.length; i++) {
+            args[i - 1] = arguments[i];
+        }
+    }
+    queue.push(new Item(fun, args));
+    if (queue.length === 1 && !draining) {
+        runTimeout(drainQueue);
+    }
+};
+
+// v8 likes predictible objects
+function Item(fun, array) {
+    this.fun = fun;
+    this.array = array;
+}
+Item.prototype.run = function () {
+    this.fun.apply(null, this.array);
+};
+process.title = 'browser';
+process.browser = true;
+process.env = {};
+process.argv = [];
+process.version = ''; // empty string to avoid regexp issues
+process.versions = {};
+
+function noop() {}
+
+process.on = noop;
+process.addListener = noop;
+process.once = noop;
+process.off = noop;
+process.removeListener = noop;
+process.removeAllListeners = noop;
+process.emit = noop;
+process.prependListener = noop;
+process.prependOnceListener = noop;
+
+process.listeners = function (name) { return [] }
+
+process.binding = function (name) {
+    throw new Error('process.binding is not supported');
+};
+
+process.cwd = function () { return '/' };
+process.chdir = function (dir) {
+    throw new Error('process.chdir is not supported');
+};
+process.umask = function() { return 0; };
+
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var Dexie = __webpack_require__(1);
+var dropArrow = __webpack_require__(3);
+var eraseCookie = __webpack_require__(20);
+
+
+
+const loadGenre = function loadGenre(type) {
+
+    new Dexie(type).open().then(function(db) {
+        return db.table('genre').toArray();
+    }).then(function(albums) {
+        var main = document.getElementById('mainContainer');
+        var myTemplates = __webpack_require__(5);
+        document.cookie = type + '=active';
+        eraseCookie(type);
+        main.innerHTML = myTemplates(albums);
+        dropArrow();
+    }).catch(function(err) {
+        console.log(err);
+    })
+
+
+};
+
+
+module.exports = loadGenre;
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports) {
+
+
+
+const eraseCookie = function eraseCookie(type) {
+	var keyValues = document.cookie.split(/; */); 
+	for(var i = 0; i < keyValues.length; i++){
+		var name = keyValues[i].substring(0, keyValues[i].indexOf('='));
+		
+		if(type !== name && name !== 'my_cookie'){
+			document.cookie = name + '=; Max-Age=0';
+		}
+	}
+}
+
+
+module.exports = eraseCookie; 
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Create a simple path alias to allow browserify to resolve
+// the runtime on a supported path.
+module.exports = __webpack_require__(22)['default'];
+
+
+/***/ }),
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5794,14 +6322,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'd
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj['default'] = obj; return newObj; } }
 
-var _handlebarsBase = __webpack_require__(7);
+var _handlebarsBase = __webpack_require__(6);
 
 var base = _interopRequireWildcard(_handlebarsBase);
 
 // Each of these augment the Handlebars object. No need to setup here.
 // (This is done to easily share code between commonjs and browse envs)
 
-var _handlebarsSafeString = __webpack_require__(27);
+var _handlebarsSafeString = __webpack_require__(34);
 
 var _handlebarsSafeString2 = _interopRequireDefault(_handlebarsSafeString);
 
@@ -5813,11 +6341,11 @@ var _handlebarsUtils = __webpack_require__(0);
 
 var Utils = _interopRequireWildcard(_handlebarsUtils);
 
-var _handlebarsRuntime = __webpack_require__(28);
+var _handlebarsRuntime = __webpack_require__(35);
 
 var runtime = _interopRequireWildcard(_handlebarsRuntime);
 
-var _handlebarsNoConflict = __webpack_require__(29);
+var _handlebarsNoConflict = __webpack_require__(36);
 
 var _handlebarsNoConflict2 = _interopRequireDefault(_handlebarsNoConflict);
 
@@ -5852,7 +6380,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 16 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5864,31 +6392,31 @@ exports.registerDefaultHelpers = registerDefaultHelpers;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-var _helpersBlockHelperMissing = __webpack_require__(17);
+var _helpersBlockHelperMissing = __webpack_require__(24);
 
 var _helpersBlockHelperMissing2 = _interopRequireDefault(_helpersBlockHelperMissing);
 
-var _helpersEach = __webpack_require__(18);
+var _helpersEach = __webpack_require__(25);
 
 var _helpersEach2 = _interopRequireDefault(_helpersEach);
 
-var _helpersHelperMissing = __webpack_require__(19);
+var _helpersHelperMissing = __webpack_require__(26);
 
 var _helpersHelperMissing2 = _interopRequireDefault(_helpersHelperMissing);
 
-var _helpersIf = __webpack_require__(20);
+var _helpersIf = __webpack_require__(27);
 
 var _helpersIf2 = _interopRequireDefault(_helpersIf);
 
-var _helpersLog = __webpack_require__(21);
+var _helpersLog = __webpack_require__(28);
 
 var _helpersLog2 = _interopRequireDefault(_helpersLog);
 
-var _helpersLookup = __webpack_require__(22);
+var _helpersLookup = __webpack_require__(29);
 
 var _helpersLookup2 = _interopRequireDefault(_helpersLookup);
 
-var _helpersWith = __webpack_require__(23);
+var _helpersWith = __webpack_require__(30);
 
 var _helpersWith2 = _interopRequireDefault(_helpersWith);
 
@@ -5905,7 +6433,7 @@ function registerDefaultHelpers(instance) {
 
 
 /***/ }),
-/* 17 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5951,7 +6479,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 18 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6052,7 +6580,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 19 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6084,7 +6612,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 20 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6120,7 +6648,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 21 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6153,7 +6681,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 22 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6172,7 +6700,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 23 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6212,7 +6740,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 24 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6224,7 +6752,7 @@ exports.registerDefaultDecorators = registerDefaultDecorators;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-var _decoratorsInline = __webpack_require__(25);
+var _decoratorsInline = __webpack_require__(32);
 
 var _decoratorsInline2 = _interopRequireDefault(_decoratorsInline);
 
@@ -6235,7 +6763,7 @@ function registerDefaultDecorators(instance) {
 
 
 /***/ }),
-/* 25 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6271,7 +6799,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 26 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6325,7 +6853,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 27 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6347,7 +6875,7 @@ module.exports = exports['default'];
 
 
 /***/ }),
-/* 28 */
+/* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6376,7 +6904,7 @@ var _exception = __webpack_require__(2);
 
 var _exception2 = _interopRequireDefault(_exception);
 
-var _base = __webpack_require__(7);
+var _base = __webpack_require__(6);
 
 function checkRevision(compilerInfo) {
   var compilerRevision = compilerInfo && compilerInfo[0] || 1,
@@ -6661,7 +7189,7 @@ function executeDecorators(fn, prog, container, depths, data, blockParams) {
 
 
 /***/ }),
-/* 29 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6689,565 +7217,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4)))
 
 /***/ }),
-/* 30 */
-/***/ (function(module, exports) {
-
-const getCookie = function getCookie(name) {
-    var dc = document.cookie;
-    var prefix = name + '=';
-    var begin = dc.indexOf('; ' + prefix);
-    if (begin == -1) {
-        begin = dc.indexOf(prefix);
-        if (begin != 0) return null;
-    }
-    else
-    {
-        begin += 2;
-        var end = document.cookie.indexOf(';', begin);
-        if (end == -1) {
-            end = dc.length;
-        }
-    }
-    // because unescape has been deprecated, replaced with decodeURI
-    //return unescape(dc.substring(begin + prefix.length, end));
-    return decodeURI(dc.substring(begin + prefix.length, end));
-}; 
-
-module.exports = getCookie; 
-
-/***/ }),
-/* 31 */
-/***/ (function(module, exports) {
-
-const setCookie = function setCookie() {
-    document.cookie = 'my_cookie=visitCookie;max-age=43200';  
-};
-
-module.exports = setCookie;
-
-/***/ }),
-/* 32 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var Dexie = __webpack_require__(1);
-
-
-
-const storeToDB = function storeToDB (data) {
-    var db = new Dexie('pop');
-    db.version(1).stores({
-        genre: '&rank,artist,album,url',
-    });
-
-    data.forEach(function(item) {
-        db.genre.add({ rank: +item['@attr'].rank, artist: item.artist.name, album: item.name, url: item.image[2]['#text']});
-    }); 
-     
-    
-  
-};
-
-
-
-
-module.exports = storeToDB;
-
-/***/ }),
-/* 33 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var apply = Function.prototype.apply;
-
-// DOM APIs, for completeness
-
-exports.setTimeout = function() {
-  return new Timeout(apply.call(setTimeout, window, arguments), clearTimeout);
-};
-exports.setInterval = function() {
-  return new Timeout(apply.call(setInterval, window, arguments), clearInterval);
-};
-exports.clearTimeout =
-exports.clearInterval = function(timeout) {
-  if (timeout) {
-    timeout.close();
-  }
-};
-
-function Timeout(id, clearFn) {
-  this._id = id;
-  this._clearFn = clearFn;
-}
-Timeout.prototype.unref = Timeout.prototype.ref = function() {};
-Timeout.prototype.close = function() {
-  this._clearFn.call(window, this._id);
-};
-
-// Does not start the time, just sets up the members needed.
-exports.enroll = function(item, msecs) {
-  clearTimeout(item._idleTimeoutId);
-  item._idleTimeout = msecs;
-};
-
-exports.unenroll = function(item) {
-  clearTimeout(item._idleTimeoutId);
-  item._idleTimeout = -1;
-};
-
-exports._unrefActive = exports.active = function(item) {
-  clearTimeout(item._idleTimeoutId);
-
-  var msecs = item._idleTimeout;
-  if (msecs >= 0) {
-    item._idleTimeoutId = setTimeout(function onTimeout() {
-      if (item._onTimeout)
-        item._onTimeout();
-    }, msecs);
-  }
-};
-
-// setimmediate attaches itself to the global object
-__webpack_require__(34);
-exports.setImmediate = setImmediate;
-exports.clearImmediate = clearImmediate;
-
-
-/***/ }),
-/* 34 */
-/***/ (function(module, exports, __webpack_require__) {
-
-/* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
-    "use strict";
-
-    if (global.setImmediate) {
-        return;
-    }
-
-    var nextHandle = 1; // Spec says greater than zero
-    var tasksByHandle = {};
-    var currentlyRunningATask = false;
-    var doc = global.document;
-    var registerImmediate;
-
-    function setImmediate(callback) {
-      // Callback can either be a function or a string
-      if (typeof callback !== "function") {
-        callback = new Function("" + callback);
-      }
-      // Copy function arguments
-      var args = new Array(arguments.length - 1);
-      for (var i = 0; i < args.length; i++) {
-          args[i] = arguments[i + 1];
-      }
-      // Store and register the task
-      var task = { callback: callback, args: args };
-      tasksByHandle[nextHandle] = task;
-      registerImmediate(nextHandle);
-      return nextHandle++;
-    }
-
-    function clearImmediate(handle) {
-        delete tasksByHandle[handle];
-    }
-
-    function run(task) {
-        var callback = task.callback;
-        var args = task.args;
-        switch (args.length) {
-        case 0:
-            callback();
-            break;
-        case 1:
-            callback(args[0]);
-            break;
-        case 2:
-            callback(args[0], args[1]);
-            break;
-        case 3:
-            callback(args[0], args[1], args[2]);
-            break;
-        default:
-            callback.apply(undefined, args);
-            break;
-        }
-    }
-
-    function runIfPresent(handle) {
-        // From the spec: "Wait until any invocations of this algorithm started before this one have completed."
-        // So if we're currently running a task, we'll need to delay this invocation.
-        if (currentlyRunningATask) {
-            // Delay by doing a setTimeout. setImmediate was tried instead, but in Firefox 7 it generated a
-            // "too much recursion" error.
-            setTimeout(runIfPresent, 0, handle);
-        } else {
-            var task = tasksByHandle[handle];
-            if (task) {
-                currentlyRunningATask = true;
-                try {
-                    run(task);
-                } finally {
-                    clearImmediate(handle);
-                    currentlyRunningATask = false;
-                }
-            }
-        }
-    }
-
-    function installNextTickImplementation() {
-        registerImmediate = function(handle) {
-            process.nextTick(function () { runIfPresent(handle); });
-        };
-    }
-
-    function canUsePostMessage() {
-        // The test against `importScripts` prevents this implementation from being installed inside a web worker,
-        // where `global.postMessage` means something completely different and can't be used for this purpose.
-        if (global.postMessage && !global.importScripts) {
-            var postMessageIsAsynchronous = true;
-            var oldOnMessage = global.onmessage;
-            global.onmessage = function() {
-                postMessageIsAsynchronous = false;
-            };
-            global.postMessage("", "*");
-            global.onmessage = oldOnMessage;
-            return postMessageIsAsynchronous;
-        }
-    }
-
-    function installPostMessageImplementation() {
-        // Installs an event handler on `global` for the `message` event: see
-        // * https://developer.mozilla.org/en/DOM/window.postMessage
-        // * http://www.whatwg.org/specs/web-apps/current-work/multipage/comms.html#crossDocumentMessages
-
-        var messagePrefix = "setImmediate$" + Math.random() + "$";
-        var onGlobalMessage = function(event) {
-            if (event.source === global &&
-                typeof event.data === "string" &&
-                event.data.indexOf(messagePrefix) === 0) {
-                runIfPresent(+event.data.slice(messagePrefix.length));
-            }
-        };
-
-        if (global.addEventListener) {
-            global.addEventListener("message", onGlobalMessage, false);
-        } else {
-            global.attachEvent("onmessage", onGlobalMessage);
-        }
-
-        registerImmediate = function(handle) {
-            global.postMessage(messagePrefix + handle, "*");
-        };
-    }
-
-    function installMessageChannelImplementation() {
-        var channel = new MessageChannel();
-        channel.port1.onmessage = function(event) {
-            var handle = event.data;
-            runIfPresent(handle);
-        };
-
-        registerImmediate = function(handle) {
-            channel.port2.postMessage(handle);
-        };
-    }
-
-    function installReadyStateChangeImplementation() {
-        var html = doc.documentElement;
-        registerImmediate = function(handle) {
-            // Create a <script> element; its readystatechange event will be fired asynchronously once it is inserted
-            // into the document. Do so, thus queuing up the task. Remember to clean up once it's been called.
-            var script = doc.createElement("script");
-            script.onreadystatechange = function () {
-                runIfPresent(handle);
-                script.onreadystatechange = null;
-                html.removeChild(script);
-                script = null;
-            };
-            html.appendChild(script);
-        };
-    }
-
-    function installSetTimeoutImplementation() {
-        registerImmediate = function(handle) {
-            setTimeout(runIfPresent, 0, handle);
-        };
-    }
-
-    // If supported, we should attach to the prototype of global, since that is where setTimeout et al. live.
-    var attachTo = Object.getPrototypeOf && Object.getPrototypeOf(global);
-    attachTo = attachTo && attachTo.setTimeout ? attachTo : global;
-
-    // Don't get fooled by e.g. browserify environments.
-    if ({}.toString.call(global.process) === "[object process]") {
-        // For Node.js before 0.9
-        installNextTickImplementation();
-
-    } else if (canUsePostMessage()) {
-        // For non-IE10 modern browsers
-        installPostMessageImplementation();
-
-    } else if (global.MessageChannel) {
-        // For web workers, where supported
-        installMessageChannelImplementation();
-
-    } else if (doc && "onreadystatechange" in doc.createElement("script")) {
-        // For IE 6–8
-        installReadyStateChangeImplementation();
-
-    } else {
-        // For older browsers
-        installSetTimeoutImplementation();
-    }
-
-    attachTo.setImmediate = setImmediate;
-    attachTo.clearImmediate = clearImmediate;
-}(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
-
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4), __webpack_require__(35)))
-
-/***/ }),
-/* 35 */
-/***/ (function(module, exports) {
-
-// shim for using process in browser
-var process = module.exports = {};
-
-// cached from whatever global is present so that test runners that stub it
-// don't break things.  But we need to wrap it in a try catch in case it is
-// wrapped in strict mode code which doesn't define any globals.  It's inside a
-// function because try/catches deoptimize in certain engines.
-
-var cachedSetTimeout;
-var cachedClearTimeout;
-
-function defaultSetTimout() {
-    throw new Error('setTimeout has not been defined');
-}
-function defaultClearTimeout () {
-    throw new Error('clearTimeout has not been defined');
-}
-(function () {
-    try {
-        if (typeof setTimeout === 'function') {
-            cachedSetTimeout = setTimeout;
-        } else {
-            cachedSetTimeout = defaultSetTimout;
-        }
-    } catch (e) {
-        cachedSetTimeout = defaultSetTimout;
-    }
-    try {
-        if (typeof clearTimeout === 'function') {
-            cachedClearTimeout = clearTimeout;
-        } else {
-            cachedClearTimeout = defaultClearTimeout;
-        }
-    } catch (e) {
-        cachedClearTimeout = defaultClearTimeout;
-    }
-} ())
-function runTimeout(fun) {
-    if (cachedSetTimeout === setTimeout) {
-        //normal enviroments in sane situations
-        return setTimeout(fun, 0);
-    }
-    // if setTimeout wasn't available but was latter defined
-    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
-        cachedSetTimeout = setTimeout;
-        return setTimeout(fun, 0);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedSetTimeout(fun, 0);
-    } catch(e){
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
-            return cachedSetTimeout.call(null, fun, 0);
-        } catch(e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
-            return cachedSetTimeout.call(this, fun, 0);
-        }
-    }
-
-
-}
-function runClearTimeout(marker) {
-    if (cachedClearTimeout === clearTimeout) {
-        //normal enviroments in sane situations
-        return clearTimeout(marker);
-    }
-    // if clearTimeout wasn't available but was latter defined
-    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
-        cachedClearTimeout = clearTimeout;
-        return clearTimeout(marker);
-    }
-    try {
-        // when when somebody has screwed with setTimeout but no I.E. maddness
-        return cachedClearTimeout(marker);
-    } catch (e){
-        try {
-            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
-            return cachedClearTimeout.call(null, marker);
-        } catch (e){
-            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
-            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
-            return cachedClearTimeout.call(this, marker);
-        }
-    }
-
-
-
-}
-var queue = [];
-var draining = false;
-var currentQueue;
-var queueIndex = -1;
-
-function cleanUpNextTick() {
-    if (!draining || !currentQueue) {
-        return;
-    }
-    draining = false;
-    if (currentQueue.length) {
-        queue = currentQueue.concat(queue);
-    } else {
-        queueIndex = -1;
-    }
-    if (queue.length) {
-        drainQueue();
-    }
-}
-
-function drainQueue() {
-    if (draining) {
-        return;
-    }
-    var timeout = runTimeout(cleanUpNextTick);
-    draining = true;
-
-    var len = queue.length;
-    while(len) {
-        currentQueue = queue;
-        queue = [];
-        while (++queueIndex < len) {
-            if (currentQueue) {
-                currentQueue[queueIndex].run();
-            }
-        }
-        queueIndex = -1;
-        len = queue.length;
-    }
-    currentQueue = null;
-    draining = false;
-    runClearTimeout(timeout);
-}
-
-process.nextTick = function (fun) {
-    var args = new Array(arguments.length - 1);
-    if (arguments.length > 1) {
-        for (var i = 1; i < arguments.length; i++) {
-            args[i - 1] = arguments[i];
-        }
-    }
-    queue.push(new Item(fun, args));
-    if (queue.length === 1 && !draining) {
-        runTimeout(drainQueue);
-    }
-};
-
-// v8 likes predictible objects
-function Item(fun, array) {
-    this.fun = fun;
-    this.array = array;
-}
-Item.prototype.run = function () {
-    this.fun.apply(null, this.array);
-};
-process.title = 'browser';
-process.browser = true;
-process.env = {};
-process.argv = [];
-process.version = ''; // empty string to avoid regexp issues
-process.versions = {};
-
-function noop() {}
-
-process.on = noop;
-process.addListener = noop;
-process.once = noop;
-process.off = noop;
-process.removeListener = noop;
-process.removeAllListeners = noop;
-process.emit = noop;
-process.prependListener = noop;
-process.prependOnceListener = noop;
-
-process.listeners = function (name) { return [] }
-
-process.binding = function (name) {
-    throw new Error('process.binding is not supported');
-};
-
-process.cwd = function () { return '/' };
-process.chdir = function (dir) {
-    throw new Error('process.chdir is not supported');
-};
-process.umask = function() { return 0; };
-
-
-/***/ }),
-/* 36 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Dexie = __webpack_require__(1);
-var dropArrow = __webpack_require__(3);
-var eraseCookie = __webpack_require__(37);
-
-
-
-const loadGenre = function loadGenre(type) {
-
-    new Dexie(type).open().then(function(db) {
-        return db.table('genre').toArray();
-    }).then(function(albums) {
-        var main = document.getElementById('mainContainer');
-        var myTemplates = __webpack_require__(5);
-        document.cookie = type + '=active';
-        eraseCookie(type);
-        main.innerHTML = myTemplates(albums);
-        dropArrow();
-    }).catch(function(err) {
-        console.log(err);
-    })
-
-
-};
-
-
-module.exports = loadGenre;
-
-/***/ }),
 /* 37 */
-/***/ (function(module, exports) {
-
-
-
-const eraseCookie = function eraseCookie(type) {
-	var keyValues = document.cookie.split(/; */); 
-	for(var i = 0; i < keyValues.length; i++){
-		var name = keyValues[i].substring(0, keyValues[i].indexOf('='));
-		
-		if(type !== name && name !== 'my_cookie'){
-			document.cookie = name + '=; Max-Age=0';
-		}
-	}
-}
-
-
-module.exports = eraseCookie; 
-
-/***/ }),
-/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -7285,7 +7255,7 @@ const fetchAndStore = function (genre) {
 module.exports = fetchAndStore; 
 
 /***/ }),
-/* 39 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Dexie = __webpack_require__(1);
@@ -7293,7 +7263,7 @@ var dropArrow = __webpack_require__(3);
 
 
 const fetchAndStoreAndDisplay = function fetchAndStoreAndDisplay(genre) {
-    fetch('https://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=' + genre + '&limit=27&api_key=3f5a8b5b437653593a7c6e61e1277e6e&format=json')
+    fetch('https://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=' + genre + '&limit=100&api_key=3f5a8b5b437653593a7c6e61e1277e6e&format=json')
         .then(function(response) {
             if (response.status !== 200) {
                 console.log('Error staus code ' + response.status);
@@ -7303,7 +7273,7 @@ const fetchAndStoreAndDisplay = function fetchAndStoreAndDisplay(genre) {
 
                 var db = new Dexie(genre);
                 db.version(1).stores({
-                    genre: '&rank,artist,album,url,info',
+                    genre: '&rank,artist,album,url',
                 });
 
                 data.albums.album.forEach(function(item) {
@@ -7311,8 +7281,7 @@ const fetchAndStoreAndDisplay = function fetchAndStoreAndDisplay(genre) {
                         rank: +item['@attr'].rank,
                         artist: item.artist.name,
                         album: item.name,
-                        url: item.image[2]['#text'],
-                        info:item.url
+                        url: item.image[2]['#text']
                     });
                 })
 
@@ -7337,7 +7306,7 @@ const fetchAndStoreAndDisplay = function fetchAndStoreAndDisplay(genre) {
 module.exports = fetchAndStoreAndDisplay;
 
 /***/ }),
-/* 40 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -7369,8 +7338,9 @@ const checkCookieAndDisplay = function checkCookieAndDisplay() {
             return db.table('genre').toArray();
         }).then(function(albums) {
             var main = document.getElementById('mainContainer');
+            var link = document.getElementById(cookieLives); 
             var myTemplates = __webpack_require__(5);
-
+            link.style.textDecoration = 'underline';
             main.innerHTML = myTemplates(albums);
             dropArrow();
         }).catch(function(err) {
