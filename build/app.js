@@ -7202,32 +7202,29 @@ process.umask = function() { return 0; };
 var Dexie = __webpack_require__(1);
 var dropArrow = __webpack_require__(3);
 var eraseCookie = __webpack_require__(37);
+
+
+
 const loadGenre = function loadGenre(type) {
 
-
-
-new Dexie(type).open().then(function(db){
-	return db.table('genre').toArray();
-}).then(function(albums){
-  var main = document.getElementById('mainContainer');
-  var myTemplates = __webpack_require__(5);
-   document.cookie = type + '=active';
-   eraseCookie(type); 
-  main.innerHTML = myTemplates(albums);
-  dropArrow();
-}).catch(function(err){
-	console.log(err); 
-})
+    new Dexie(type).open().then(function(db) {
+        return db.table('genre').toArray();
+    }).then(function(albums) {
+        var main = document.getElementById('mainContainer');
+        var myTemplates = __webpack_require__(5);
+        document.cookie = type + '=active';
+        eraseCookie(type);
+        main.innerHTML = myTemplates(albums);
+        dropArrow();
+    }).catch(function(err) {
+        console.log(err);
+    })
 
 
 };
 
 
-module.exports = loadGenre; 
-
-
-
-
+module.exports = loadGenre;
 
 /***/ }),
 /* 37 */
@@ -7259,7 +7256,7 @@ var Dexie = __webpack_require__(1);
 
 
 const fetchAndStore = function (genre) {
-   fetch('http://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=' + genre + '&limit=27&api_key=3f5a8b5b437653593a7c6e61e1277e6e&format=json')
+   fetch('https://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=' + genre + '&limit=27&api_key=3f5a8b5b437653593a7c6e61e1277e6e&format=json')
    .then(function(response){
    	  if(response.status !== 200) {
    	  	console.log('Error staus code ' + resonse.status);
@@ -7296,7 +7293,7 @@ var dropArrow = __webpack_require__(3);
 
 
 const fetchAndStoreAndDisplay = function fetchAndStoreAndDisplay(genre) {
-    fetch('http://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=' + genre + '&limit=27&api_key=3f5a8b5b437653593a7c6e61e1277e6e&format=json')
+    fetch('https://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=' + genre + '&limit=27&api_key=3f5a8b5b437653593a7c6e61e1277e6e&format=json')
         .then(function(response) {
             if (response.status !== 200) {
                 console.log('Error staus code ' + response.status);
