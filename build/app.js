@@ -7226,10 +7226,10 @@ var Dexie = __webpack_require__(1);
 
 
 const fetchAndStore = function (genre) {
-   fetch('https://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=' + genre + '&limit=27&api_key=3f5a8b5b437653593a7c6e61e1277e6e&format=json')
+   fetch('https://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=' + genre + '&limit=15&api_key=3f5a8b5b437653593a7c6e61e1277e6e&format=json')
    .then(function(response){
    	  if(response.status !== 200) {
-   	  	console.log('Error staus code ' + resonse.status);
+   	  	console.log('Error staus code ' + response.status);
    	  }
       
       response.json().then(function(data){
@@ -7263,7 +7263,7 @@ var dropArrow = __webpack_require__(3);
 
 
 const fetchAndStoreAndDisplay = function fetchAndStoreAndDisplay(genre) {
-    fetch('https://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=' + genre + '&limit=100&api_key=3f5a8b5b437653593a7c6e61e1277e6e&format=json')
+    fetch('https://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=' + genre + '&limit=15&api_key=3f5a8b5b437653593a7c6e61e1277e6e&format=json')
         .then(function(response) {
             if (response.status !== 200) {
                 console.log('Error staus code ' + response.status);
